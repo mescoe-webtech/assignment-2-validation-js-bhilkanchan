@@ -1,0 +1,148 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="StyleSheet.css">
+    <title>REGISTRATION FORM</title>
+
+    <script type="text/javascript">
+        
+        function validate() {
+            var name = document.form.name;
+            var email = document.form.email;
+            var mobile = document.form.mobile;
+            var password = document.form.password;
+            var what = document.form.subject;
+            var reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+            var pass1 = /(?=.*\d)(?=.* [a - z])(?=.* [A - Z]).{ 8,}/;
+
+
+            if (name.value == "") {
+                window.alert("Please enter your name.");
+                name.focus();
+                return false;
+            }
+
+            else if (email.value == "" || reg.test(email.value) == false) {
+                window.alert("Please enter a valid e-mail address.");
+                email.focus();
+                return false;
+            }
+
+            else if (pass1.test(password.value) == false) {
+                window.alert("Password must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters");
+                password.focus();
+                return false;
+            }
+
+            else if (mobile.value == "") {
+                window.alert("Please enter your mobile number.");
+                mobile.focus();
+                return false;
+            }
+            else if (mobile.value.length != 10) {
+                window.alert("Please enter 10 digit mobile number.");
+                mobile.focus();
+                return false;
+            }
+
+            else if (password.value == "") {
+                window.alert("Please enter your password");
+                password.focus();
+                return false;
+            }
+
+            else if (what.selectedIndex < 1) {
+                alert("Please enter your course.");
+                what.focus();
+                return false;
+            }
+
+            return true;
+        }
+    </script>
+</head>
+
+
+<body>
+    <div class="container">
+        <img class="mySlides" src="image1.jpg" style="width:100%">
+        <img class="mySlides" src="image2.png" style="width:100%">
+        <img class="mySlides" src="image3.jpg" style="width:100%">
+     
+    </div>
+    <script>
+        var myIndex = 0;
+        carousel();
+
+        function carousel() {
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            myIndex++;
+            if (myIndex > x.length) { myIndex = 1 }
+            x[myIndex - 1].style.display = "block";
+            setTimeout(carousel, 3000);
+        }
+    </script>
+    <header>
+        <h2 class="logo">SIGN UP</h2>
+        <nav>
+            <ul class="nav-links">
+                <li><a class="nav-link" href="home.html">Home</a></li>
+                <li><a class="nav-link" href="signin.html">Login</a></li>
+                <li><a class="nav-link" href="signup.html">Signup</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <main>
+        <div class="box-container">
+            <form class="box-register">
+                <h1 style="text-align: center"> REGISTRATION FORM </h1>
+                <label for="name">Name</label><br>
+                <input type="text" name="name" id="name" placeholder="Enter your name"> <br>
+
+                <label for="uname">User Name</label><br>
+                <input type="text" name="uname" id="uname" placeholder="Enter username"> <br>
+
+                <label for="email">E-mail Address</label><br>
+                <input type="text" name="email" for="id" placeholder="Mail id should contain @"><br>
+
+                <label for="password">Password</label><br>
+                <input type="text" name="password" id="password" placeholder="Enter your password"><br>
+
+                <label for="mobile">Mobile number</label><br>
+                <input type="text" name="mobile" id="mobile" placeholder="Enter a ten digit mobile number"><br>
+
+                <label for="course">SELECT YOUR COURSE:</label>
+                <select type="text" value="" name="Subject">
+                    <option> BTECH</option>
+                    <option> BBA</option>
+                    <option> BCA</option>
+                    <option> B.COM</option>
+                </select><br />
+
+                <button type="submit">Submit</button><br>
+
+
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <ul class="foot">
+            <li><a class="foot">Contact us</a></li>
+            <li><a class="foot">About us</a></li>
+            <li><a class="foot">Our Partners</a></li>
+        </ul>
+
+    </footer>
+</body>
+</html>

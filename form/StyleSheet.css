@@ -1,0 +1,275 @@
+﻿* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #6C5B7B;
+}
+
+li, a {
+    font-size: 20px;
+}
+p {
+    
+    object-fit:contain;
+    object-position:center;
+    font-size: xx-large;
+    color: antiquewhite;
+    text-align: center;
+    width: auto;
+    height: auto;
+    margin-top: 250px;
+    margin-bottom: auto;
+    margin-left: 650px;
+    display: flex;
+}
+.container {
+    width: 1515px;
+    max-width:1515px;
+    height: 600px;
+    max-height: 600px;
+    background-color: black;
+    margin-left: auto;
+    margin-right: auto;
+    object-fit:contain;
+}
+
+
+.mySlides {
+    display: flex;
+    background-position: center;
+    background-size: cover;
+    width: 50%;
+    height: 100%;
+    object-fit: cover;
+}
+header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 30px 10%;
+    
+    top: 0;
+}
+
+.logo {
+    margin-right: auto;
+    font-size: 40px;
+    letter-spacing: 4px;
+}
+
+.nav-links li {
+    display: inline-block;
+    list-style: none;
+}
+
+.nav-link {
+    text-decoration: none;
+    padding: 0px 20px;
+    color: white;
+}
+
+    .nav-link:hover {
+        padding: 0px 20px;
+        color: #ECEC84;
+        border-bottom: 1px solid #ECEC84;
+        transition: 0.5s;
+    }
+
+footer {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 30px 10%;
+    position: static;
+    height: 800px;
+    margin-left: 80px;
+    bottom: 0;
+}
+
+.foot li {
+    display: inline;
+    list-style: none;
+}
+
+.foot {
+    text-decoration: none;
+    padding: 0px 20px;
+    color: white;
+    margin-bottom: -870px;
+    margin-right: -20px;
+}
+
+    .foot:hover {
+        padding: 0px 20px;
+        color: #FFB69B;
+        border-bottom: 1px solid #FFB69B;
+        transition: 0.5s;
+    }
+
+.box-container {
+    display: flex;
+    justify-content: space-around;
+    
+}
+
+.box {
+    width: 450px;
+    height: 350px;
+    background: #F8B195;
+    position: absolute;
+    text-align: left;
+    margin-top: 100px;
+    border-radius: 25px;
+}
+
+.box input[type=text], .box select[type=text] {
+    background: none;
+    text-align: center;
+    display: block;
+    margin: 10px auto;
+    margin-top: 15px;
+    padding: 14px 15px;
+    width: 200px;
+    border-radius: 24px;
+    border: 2px outset white;
+    transition: 0.5s;
+    color: black;
+}
+
+    .box input[type="text"]:focus, .box select[type=text]:focus {
+        width: 350px;
+        border-color: black;
+        background-color: #FFB69B;
+    }
+
+
+.box label {
+    margin-top: 10px;
+    text-align: left;
+    margin-left: 20px;
+    color: black;
+    font-size: 20px;
+}
+    .box button {
+        background: none;
+        color: #2D4059;
+        display: block;
+        margin: 20px auto;
+        text-align: center;
+        padding: 14px 10px;
+        width: 200px;
+        border-radius: 24px;
+        cursor: pointer;
+        transition: 0.5s;
+    }
+
+        .box button:hover {
+            background: #FFB69B;
+            width: 300px;
+            border-color: black;
+        }
+
+.box span {
+    color: white;
+    font-size: 18px;
+}
+
+.box-register {
+    width: 450px;
+    height: 750px;
+    background: #F8B195;
+    position: absolute;
+    text-align: left;
+    margin-top: 100px;
+    border-radius: 25px;
+    
+}
+
+    .box-register h2 {
+        color: black;
+        font-weight: 400;
+        margin: 25px auto;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+   
+    }
+
+
+
+    .box-register input[type=text], .box-register select[type=text] {
+        background: none;
+        text-align: center;
+        display: block;
+        margin: 10px auto;
+        margin-top: 5px;
+        padding: 14px 15px;
+        width: 200px;
+        border-radius: 24px;
+        border: 2px outset white;
+        transition: 0.5s;
+        color: black;
+    }
+
+        .box-register input[type="text"]:focus, .box-register select[type=text]:focus {
+            width: 350px;
+            border-color: black;
+            background-color: #FFB69B;
+        }
+
+
+
+    .box-register h1 {
+        color: #2D4059;
+        font-size: 24px;
+        font-weight: 200;
+    }
+
+    .box-register label {
+        text-align: left;
+        margin-left: 20px;
+        color: black;
+        font-size: 20px;
+
+    }
+
+    .box-register button {
+        background: none;
+        color: #2D4059;
+        display: block;
+        margin: 20px auto;
+        text-align: center;
+        padding: 14px 10px;
+        width: 200px;
+        border-radius: 24px;
+        cursor: pointer;
+        transition: 0.5s;
+    }
+
+        .box-register button:hover {
+            background: #FFB69B;
+            width: 300px;
+            border-color: black;
+        }
+
+
+    .box-register span {
+        color: white;
+        font-size: 18px;
+    }
+
+@keyframes box-in {
+    0% {
+        opacity: 0;
+        width: 100px;
+        transform: rotate(30deg);
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+
